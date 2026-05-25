@@ -1,27 +1,25 @@
-# Ex.No:1(D) ARRAYS
+# Ex.No:2(D) VARIABLE SCOPE AND CONSTRUCTOR
 
 ## QUESTION:
-Write a Java program to find the index of a given element in an array.
+Create a Java class Book with instance variables title and author.
 
 ## AIM:
-To write a Java program that finds the index position of a specified element from a given array.
+To write a Java program to demonstrate variable scope and the use of a constructor to initialize instance variables.
 
 ## ALGORITHM :
 1.	Start the program.
 2.	Import the necessary package 'java.util'
-3.	Read the size of the array from the user.
-4. Create an array of the given size.
-5. Read the array elements from the user and store them in the array.
-6. Read the element to be searched.
-7. Traverse the array and compare each element with the search element.
-8. If matched, print the index position and terminate.
-9. If not found, display "Element not found".
-10. Stop the program.
+3.	Create a class named Book with instance variables title and author.
+4. Create a parameterized constructor to initialize these variables.
+5. In the main() method, create an object of the Book class and pass values through the constructor.
+6. Display the values.
+7. End the program.
+
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Array concept using Java
+Program to implement a Variable scope and Constructor using Java
 Developed by: DHARSAN KUMAR R
 RegisterNumber:212223240028
 */
@@ -29,37 +27,36 @@ RegisterNumber:212223240028
 
 ## SOURCE CODE:
 ```
-import java.util.*;
-public class Main
+import java.util.Scanner;
+
+class Book 
 {
-    public static void main(String args[])
+    String title;
+    String author;
+    Book(String t, String a)
     {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++)
-        {
-            arr[i]=sc.nextInt();
-        }
-        int key=sc.nextInt();
-        int index=-1;
-        for(int i=0;i<n;i++)
-        {
-            if(arr[i]==key)
-            {
-                index=i;
-                break;
-            }
-        }
+        title = t;
+        author = a;
+    }
+
+    void display() {
+        System.out.println("Book Title: " + title);
+        System.out.println("Author: " + author);
+    }
+}
+
+class prog {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
         
-        if(index!=-1)
-        {
-            
-            System.out.println(index);
-        }
-        else{
-            System.out.println("Element not found");
-        }
+        String title = sc.nextLine();   
+        String author = sc.nextLine(); 
+
+        Book b = new Book(title, author);
+        b.display();
+
+        sc.close();
     }
 }
 ```
@@ -68,16 +65,12 @@ public class Main
 
 
 
-
-
 ## OUTPUT:
-![OUTPUT](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/89cca4a56df2cfb4774052b6ca0e2fe103f4875f/19AI307_JAVA(25-26)/Module-01/DAY-4/output.jpg)
+
+![java24](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/deb86e008500c33f568047cc6e92298e774f4c47/19AI307_JAVA(25-26)/Module-02/DAY-4/java24.png)
 
 ## RESULT:
 
-Thus, the Java program to find the index of a given element in an array was successfully executed.
-
-
-
+Thus, the Java program to demonstrate variable scope and constructor was executed successfully.
 
 
