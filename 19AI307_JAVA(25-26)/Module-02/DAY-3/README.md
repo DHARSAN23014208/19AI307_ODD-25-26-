@@ -1,53 +1,72 @@
-# Ex.No:1(C) LOOPING STATEMENT
+# Ex.No:2(C) ACCESS SPECIFIERS
 
 ## QUESTION:
-Construct a right-angled triangle star pattern using for loop.
+Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance. Provide public getter and setter methods to access and modify these variables.
+
 ## AIM:
-To write a Java program using looping statements to print a right-angled triangle star pattern based on user input.
+To write a Java program that demonstrates the use of access specifiers, specifically using private for data hiding and public methods to access and modify values.
 
 ## ALGORITHM :
 1.	Start the program.
-
 2.	Import the necessary package 'java.util'
+3.	Create a class BankAccount with private variables accountNumber and balance.
+4. Provide public getter and setter methods for both variables.
+5. Inside the main method, create an object of BankAccount.
+6. Use setter methods to assign values to accountNumber and balance.
+7. Display the values using getter methods.
+8. Stop the program.
 
-3. Read the number of rows from the user.
 
-4. Use an outer loop to iterate through each row.
 
-5. Use an inner loop to print stars (*) for each row.
-
-6. Move to the next line after printing stars for each row.
-
-7. End the program.
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Looping Statement using Java
+Program to implement a Access Specifiers using Java
 Developed by: DHARSAN KUMAR R
 RegisterNumber:212223240028
 */
 ```
 
 ## SOURCE CODE:
-
 ```
-import java.util.*;
-public class TrianglePattern
+import java.util.Scanner;
+
+public class Main 
 {
-    public static void main(String args[])
+    static class BankAccount 
     {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        for (int i = 1; i <= n; i++) 
-        {         
-            for (int j = 1; j <= i; j++) 
-            {      
-                System.out.print("* ");
-            }
-            System.out.println();              
+        private String accountNumber;
+        private double balance;
+        public String getAccountNumber()
+        {
+            return accountNumber;
         }
+        public void setAccountNumber(String accountNumber) 
+        {
+            this.accountNumber = accountNumber;
+        }
+        public double getBalance() 
+        {
+            return balance;
+        }
+        public void setBalance(double balance)
+        {
+            this.balance = balance;
+        }
+    }
+
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        BankAccount account = new BankAccount();
+        String accNo = sc.nextLine();
+        double bal = sc.nextDouble();
+        account.setAccountNumber(accNo);
+        account.setBalance(bal);
+        System.out.println("Account Number: "+account.getAccountNumber());
+        System.out.println("Balance: "+account.getBalance());
     }
 }
 ```
@@ -55,15 +74,15 @@ public class TrianglePattern
 
 
 
+
+
+
 ## OUTPUT:
-<img width="399" height="395" alt="image" src="https://github.com/user-attachments/assets/07286d0c-5174-4702-8d58-34b630bd23d6" />
 
-
+![java23](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/025b00cfa6e057b13e81ffd84dd75ef76213a9db/19AI307_JAVA(25-26)/Module-02/DAY-3/java23.png)
 
 ## RESULT:
-Thus, the Java program using looping statements to print a right-angled triangle star pattern was successfully written, executed, and verified.
-
-
+Thus, a Java program to implement Access Specifiers using private variables with public getter and setter methods was executed successfully.
 
 
 
